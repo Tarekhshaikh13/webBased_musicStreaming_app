@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>sign up</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <link type="stylesheet" href="C:\Users\Tareq\study\web_tech\ms\user validation\sin.css">
+    
+
+<body>
+    <div class="form">
+        <div class="head">
+            <h2>Register</h2>
+        </div>
+        <form action ="C:\Users\Tareq\study\web_tech\ms\MUSIC .html" onsubmit="return validateForm()"  id="myform" method="post">
+
+            <div class="formdesign" id="name">
+                Name: <input type="text" id="fname"><br><span class="formerror" id="span1"> </span>
+            </div>
+
+            <div class="formdesign" id="email">
+                Email: <input type="text" id="femail" required>
+                <br><span class="formerror" id="span2"> </span>
+            </div>
+
+            <div class="formdesign" id="phone">
+                Phone: <input type="phone" id="fphone" required><br><span class="formerror" id="span3"></span>
+            </div>
+
+            <div class="formdesign" id="pass">
+                Password: <input type="password" id="fpass" required><br><span class="formerror" id="span4"></span>
+            </div>
+
+            <div class="formdesign" id="cpass">
+                Confirm Password: <input type="password" id="fcpass" required><br><span class="formerror"
+                    id="span5"></span>
+            </div>
+
+            <input class="but" type="submit" value="sign up"><br><br>
+            <a class="null" href="signin.html">sign in</a>
+        </form>
+</body>
+</head>
+<script src="ms\vd\index.js"></script>
+
+</html>

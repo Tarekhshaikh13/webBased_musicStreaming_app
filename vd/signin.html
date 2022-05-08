@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#Form2").submit(function () {
+                if ($("input[id=email]").val() !== "tarekh@gmail.com" && ("input[id=pass]").val() !== "12345") {
+                    return false;
+                }
+                else { return true; }
+            });
+        });
+    </script>
+
+
+</head>
+
+<body>
+
+    <div class="form">
+        <div class="head">
+            <h2>Login</h2>
+        </div>
+
+        <form action="C:\Users\Tareq\study\web_tech\ms\MUSIC .html" id="Form2" method="post">
+            <div class="formdesign" id="email">
+                Email: <input type="email" id="email" required>
+                <br><span class="formerror"> </span>
+            </div>
+
+
+            <div class="formdesign" id="pass">
+                Password: <input type="password" id="pass" required><br><span class="formerror"></span>
+            </div>
+
+            <input class="but" type="submit" value="sign in"><br><br>
+            <a class="null" href="signup.html">sign up</a>
+    </div>
+
+    </form>
+</body>

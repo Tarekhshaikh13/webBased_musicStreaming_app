@@ -1,0 +1,75 @@
+body {
+    padding: 10px 50px;
+    background-image: url(4882066.jpg);
+    
+}
+
+.formerror{
+    font-size: 15px;
+    font: italic ;
+}
+
+.head{
+    background-color: blueviolet;
+    border-radius: 5px;
+    justify-content: center;
+    text-align: center;
+
+}
+.head h2{
+    color:white;
+    padding: 20px;
+
+}
+
+.formdesign {
+    font-size: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        
+
+}
+
+.formdesign input {
+   
+    padding: 12px 20px;
+    border: 1px solid blue;
+    margin: 14px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.formerror {
+    color: red;
+}
+
+.but {
+    border-radius: 9px;
+    width: 80px;
+    font-size: 25px;
+   
+    background-color: blueviolet;
+    color: white;
+    font-size: medium;
+    
+    margin-left:170px ;
+
+}
+.but:hover{
+    background-color: white;
+    color:blueviolet;
+    border-color: blueviolet;
+}
+
+.form{
+    background: white;
+    border: 1px solid silver;
+    border-radius: 5px;
+    width:fit-content;
+    margin-left: 500px;
+    margin-top: 100px;
+    justify-self: center;
+}
+.null{
+    margin-left: 190px;
+}

@@ -1,0 +1,145 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+        
+
+            $("#span1").hide();
+            $("#span2").hide();
+            $("#span3").hide();
+            $("#span4").hide();
+            $("#span5").hide();
+
+            var error_fname = false;
+            var error_email = false;
+            var error_phone = false;
+            var error_password = false;
+            var error_retype_password = false;
+
+
+
+
+
+            $("#fname").focusout(function () {
+                check_fname();
+            });
+            $("#femail").focusout(function () {
+                check_femail();
+            });
+            $("#fphone").focusout(function () {
+                check_phone();
+            });
+            $("#fpass").focusout(function () {
+                check_password();
+            });
+            $("#fcpass").focusout(function () {
+                check_retype_password();
+            });
+
+
+
+
+
+
+
+
+
+            function check_fname() {
+                var pattern = /^[a-zA-Z]*$/;
+                var fname = $("#fname").val();
+                if (pattern.test(fname) && fname !== '') {
+                    $("#span1").hide();
+
+                } else {
+                    $("#span1").html("Should contain only letters");
+                    $("#span1").show();
+
+                    error_fname = true;
+                }
+            }
+
+            function check_phone() {
+                var phone = $("input[id=fphone]").val();
+                if (phone.length !== 10) {
+                    $("#span3").html("Invalid number");
+                    $("#span3").show();
+                    console.log(phone, "true");
+
+                    error_phone = true;
+                }
+                else {
+                    console.log(phone, "true");
+                    $("#span3").hide();
+                }
+            }
+
+            function check_password() {
+                var password_length = $("#fpass").val().length;
+                if (password_length < 5) {
+                    $("#span4").html("Atleast 5 Characters");
+                    $("#span4").show();
+
+                    error_password = true;
+                } else {
+                    $("#span4").hide();
+
+                }
+            }
+
+            function check_retype_password() {
+                var password = $("#fpass").val();
+                var retype_password = $("#fcpass").val();
+                if (password !== retype_password) {
+                    $("#span5").html("Passwords Did not Matched");
+                    $("#span5").show();
+                    error_retype_password = true;
+                } else {
+                    $("#span5").hide();
+
+                }
+            }
+
+            function check_femail() {
+                if (isEmail($("#femail").val())) {
+                    $("#span2").hide();
+                }
+                else {
+                    $("#span2").html("Invalid Email");
+                    $("#span2").show();
+
+                    error_email = true;
+                }
+            }
+            function isEmail(email) {
+                return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+            }
+
+            $("#myform").submit(function () {
+                var rtn=true;
+                error_fname = false;
+                error_email = false;
+                error_phone = false;
+                error_password = false;
+                error_retype_password = false;
+
+
+                check_fname();
+                check_phone();
+                check_femail();
+                check_password();
+                check_retype_password();
+
+                if (error_fname === false && error_phone === false &&
+                    error_femail === false && error_password === false &&
+                    error_retype_password === false) {
+                    rtn=true;
+                } 
+                else {
+                    alert("please fill the form correctly")
+                    rtn=false;
+                }
+
+              return rtn;
+            });
+        });
+    </script>
